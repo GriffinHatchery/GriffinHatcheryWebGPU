@@ -83,7 +83,7 @@ fn vertex_main(@location(0) position: vec3<f32>, @location(1) norm: vec3<f32>, @
 
     var output: VertexOut;
     output.position = vec4<f32>(x, y, z / size, 1.0);
-    output.normal = rotx(rotz(norm, a), b);
+    output.normal = roty(rotx(rotz(norm, a), b), c);
     output.pointing = pos;
     output.color = getColor(norm);
     return output;

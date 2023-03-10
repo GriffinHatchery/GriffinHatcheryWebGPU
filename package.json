@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@types/w3c-image-capture": "^1.0.7",
+    "@webgpu/types": "^0.1.24"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc && Xcopy /E /I /Y .\\public\\ .\\dist\\",
+    "link": "mkdir .\\dist && mklink /J .\\dist\\shaders .\\public\\shaders && mklink /H .\\dist\\favicon.ico .\\public\\favicon.ico && mklink /H .\\dist\\index.html .\\public\\index.html",
+    "type": "tsc --noEmit",
+    "clean": "rmdir /S /Q .\\dist\\"
+  },
+  "name": "griffinhatcherywebgpu",
+  "version": "1.0.0",
+  "author": "David Griffin",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
